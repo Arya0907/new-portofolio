@@ -1,0 +1,543 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --warna-hitam:#0f0f0f;
+    --font-pop:"Poppins";
+    --warna-abu:rgb(20, 20, 20);
+}
+
+header{
+    height: 80px;
+    background-color: var(--warna-hitam);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo{
+    color: white;
+    font-family: var(--font-pop);
+    margin-left: 105px;
+}
+
+nav{
+    margin-right:250px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    margin: 28px;
+    list-style: none;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-pop);
+    transition:  all 0.4s;
+}
+
+nav a:hover{
+    color: aqua;
+    text-shadow: 0 0 10px aqua;
+    transition:  all 0.4s;
+}
+
+.bagian-home{
+    background-color: var(--warna-hitam);
+    height: 900px;
+    display: flex;
+}
+
+article{
+    padding-top: 300px;
+    margin-left: 20%;
+    font-family: var(--font-pop);
+    color: white;
+}
+
+article h1{
+    font-size: 40px;
+}
+
+.auto-type{
+    display: flex;
+    font-size: 40px;
+    color: aqua;
+}
+
+.codewheel-auto-typing{
+    margin-left: 10px;
+    border-right: 1px solid aqua;
+}
+
+aside{
+    margin-top: 180px;
+    margin-left: 200px;
+}
+
+aside img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid rgba(0, 255, 255, 0.722);
+    box-shadow: 0 0 50px aqua;
+}
+
+.btn-home{
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
+.btn-home a{
+    background-color: rgb(65, 62, 62);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 100px;
+    transition:  all 0.4s;
+    border: none;
+}
+
+ .btn-home a:hover{
+    background-color: #323232;
+    color: aqua;
+    text-shadow: 0 0 10px aqua;
+    transition:  all 0.4s;
+    box-shadow:  0 0 10px aqua;
+}
+.bagian-about{
+    height: 950px;
+    background-color: var(--warna-hitam);
+    color: white;
+    font-family: var(--font-pop);
+}
+
+.isi-about{
+    margin-left: 12%;
+}
+
+.nav-about{
+padding-top: 100px;
+margin-left: 100px;
+}
+
+
+.button-about{
+    margin-top: 50px;
+    margin-left: -10px;
+    
+}
+
+.button-about button{
+    background-color:rgb(20, 20, 20);
+    color: aqua;
+    margin: 10px;
+    border: none;
+    font-size: 20px;
+    border-bottom:  1px solid rgb(0, 234, 255);
+    cursor: pointer;
+    padding: 5px 50px;
+    font-family: var(--font-pop);
+}
+
+.isibtnabout{
+    margin-top: 30px;
+    color: white;
+    display: flex;
+}
+
+.isibtnabout img{
+    width: 500px;
+
+}
+
+.text-about{
+    width: 700px;
+    margin-left: 30px;
+    font-size: 30px;
+    
+}
+
+.Skill{
+    width:950px ;
+    margin-left: 30px;
+}
+
+.kumpulan{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto-logo{
+    margin: 20px;
+    text-align: center;
+
+}
+
+.foto-logo img{
+    width: 200px;
+}
+
+.kumpulan-achive{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto-achive{
+    margin: 20px;
+    text-align: center;
+}
+
+.foto-achive img{
+    height:  250px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.Project-Akhir{
+    background-color: var(--warna-hitam);
+    color: white;
+    font-family: var(--font-pop);
+    height: auto;
+}
+
+.judul-Project{
+    text-align: center;
+    padding-top: 80px;
+}
+
+.foto-project1{
+    margin-top: 90px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.foto-project1 img{
+    width: 900px;
+    margin-left: 30px;
+    border-radius: 40px;
+}
+
+.foto-project1 h1{
+    margin-left: 30px;
+    width: 800px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.btn-project{
+    margin-top: 40px;
+}
+
+.btn-project a{
+    background-color: var(--warna-abu);
+    color: aqua;
+    list-style: none;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 25px 70px;
+
+}
+
+.foto-project2{
+    margin-top: 200px;
+    margin-right: 40px;
+    display: flex;
+}
+
+.foto-project2 img{
+    width: 900px;
+    border-radius: 40px;
+}
+
+.foto-project2 h1{
+    margin-left: 30px;
+    width: 800px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.foto-project3{
+    margin-top: 200px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.foto-project3 img{
+    width: 900px;
+    margin-left: 30px;
+    border-radius: 40px;
+}
+
+.foto-project3 h1{
+    margin-left: 30px;
+    width: 800px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.bagian-contact{
+    height: 1100px;
+    font-family: var(--font-pop);
+    background-color: var(--warna-hitam);
+}
+
+.posisi{
+    padding-top: 330px;
+    margin-left: 350px;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+    max-width: 100%;
+    min-width: 370px;
+    box-shadow: 20px 10px 0px rgba(0, 255, 255, 0.761);
+}
+
+.card-container {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    height: 480px;
+    background-color:var(--warna-abu);
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    height: 460px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    height: 603px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+.left-container {
+    height: 90%;
+    width: 80%;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.left p {
+    font-size: 0.9rem;
+}
+
+.kumpulan-sosmed{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-sosmed img{
+    width: 40px;
+    border-radius: 100%;
+    height:40px;
+    margin:10px ;
+}
+
+.action h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.right-container {
+    width: 70%;
+    padding-top: 100px;
+    text-align: center;
+}
+
+input,
+textarea {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #00b4cf;
+}
+
+.btn-contact {
+    border-radius: 20px;
+    border: 1px solid #00b4cf;
+    background-color: #00b4cf;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    opacity: 0.7;
+}
+
+textarea {
+    height: 90px;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #ffffff;
+  background-color:var(--warna-hitam);
+  border-top: 1px solid #e5e5e5;
+  font-family: var(--font-pop);
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: var(--font-pop);
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+
+
