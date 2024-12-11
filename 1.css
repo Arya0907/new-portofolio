@@ -515,28 +515,291 @@ textarea {
   color: #2f2f2f;
 }
 
-@media screen and (min-width: 24.375em) {
-  .legal .legal__links {
-    margin-left: auto;
-  }
+/* Responsive CSS with Original Styling Preserved */
+
+/* Root Variables and Base Reset */
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-@media screen and (min-width: 40.375em) {
-  .footer__nav > * {
-    flex: 1;
-  }
-  
-  .nav__item--extra {
-    flex-grow: 2;
-  }
-  
-  .footer__addr {
-    flex: 1 0px;
-  }
-  
-  .footer__nav {
-    flex: 2 0px;
-  }
+:root {
+    --warna-hitam: #0f0f0f;
+    --font-pop: "Poppins";
+    --warna-abu: rgb(20, 20, 20);
+}
+
+/* Media Queries */
+/* Mobile Phones (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Header Responsiveness */
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-right: 0;
+        width: 100%;
+        display:none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    /* Home Section */
+    .bagian-home {
+        height: auto;
+        flex-direction: column;
+        padding: 100px 20px 20px;
+    }
+
+    article {
+        margin-left: 0;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    article h1 {
+        font-size: 28px;
+    }
+
+    .auto-type {
+        justify-content: center;
+    }
+
+    aside {
+        margin-top: 30px;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    aside img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .btn-home {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* About Section */
+    .bagian-about {
+        height: auto;
+    }
+
+    .isi-about, .nav-about {
+        margin-left: 10px;
+        padding: 20px 10px;
+    }
+
+    .button-about {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .isibtnabout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .isibtnabout img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text-about, .Skill, .Achivement {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .kumpulan, .kumpulan-achive {
+        justify-content: center;
+    }
+
+    .foto-logo, .foto-achive {
+        margin: 10px;
+    }
+
+    .foto-logo img {
+        width: 100px;
+    }
+
+    /* Project Section */
+    .Project-Akhir {
+        padding: 20px 10px;
+    }
+
+    .foto-project1, .foto-project2, .foto-project3 {
+        flex-direction: column;
+        margin: 50px 0;
+        align-items: center;
+    }
+
+    .foto-project1 img, .foto-project2 img, .foto-project3 img {
+        width: 100%;
+        max-width: 350px;
+        margin-left: 0;
+    }
+
+    .foto-project1 h1, .foto-project2 h1, .foto-project3 h1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Contact Section */
+    .bagian-contact {
+        height: auto;
+    }
+
+    .posisi {
+        margin-left: 10px;
+        padding: 20px 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-container {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+    }
+
+    .footer__nav > * {
+        flex: 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .nav__ul--extra {
+        column-count: 1;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Tablet Devices (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .bagian-home {
+        padding: 100px 50px;
+    }
+
+    article {
+        margin-left: 10%;
+    }
+
+    aside img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .isibtnabout {
+        justify-content: center;
+    }
+
+    .text-about {
+        width: 500px;
+        margin-left: 20px;
+        font-size: 24px;
+    }
+
+    .kumpulan {
+        justify-content: center;
+    }
+
+    .Project-Akhir {
+        padding: 50px 20px;
+    }
+
+    .foto-project1, .foto-project2, .foto-project3 {
+        margin: 50px 0;
+    }
+
+    .foto-project1 img, .foto-project2 img, .foto-project3 img {
+        width: 700px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 
