@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 :root{
     --warna-hitam:#0f0f0f;
@@ -17,6 +18,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 2;
+    align-items: center;
 }
 
 .logo{
@@ -49,6 +51,22 @@ nav a:hover{
     color: aqua;
     text-shadow: 0 0 10px aqua;
     transition:  all 0.4s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.mobile-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 .bagian-home{
@@ -204,88 +222,73 @@ margin-left: 100px;
     object-fit: cover;
 }
 
-.Project-Akhir{
+/* PROJECT SECTION - IMPROVED RESPONSIVE DESIGN */
+.Project-Akhir {
     background-color: var(--warna-hitam);
     color: white;
     font-family: var(--font-pop);
-    height: auto;
+    padding: 80px 20px 50px 20px;
 }
 
-.judul-Project{
+.judul-Project {
     text-align: center;
-    padding-top: 80px;
+    margin-bottom: 60px;
 }
 
-.foto-project1{
-    margin-top: 90px;
-    margin-left: 40px;
-    display: flex;
+.judul-Project h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.foto-project1 img{
-    width: 900px;
-    margin-left: 30px;
-    border-radius: 40px;
+/* Kumpulan Project Container */
+.kumpulan-project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.foto-project1 h1{
-    margin-left: 30px;
-    width: 800px;
+/* Individual Project Card */
+.foto-project {
+    background-color: rgba(32, 32, 32, 0.8);
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    margin-top: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    margin: 0;
 }
 
-.btn-project{
-    margin-top: 40px;
+.foto-project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
 }
 
-.btn-project a{
-    background-color: var(--warna-abu);
-    color: aqua;
-    list-style: none;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 25px 70px;
-
+.foto-project img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.foto-project2{
-    margin-top: 200px;
-    margin-right: 40px;
-    display: flex;
+.foto-project img:hover {
+    transform: scale(1.05);
 }
 
-.foto-project2 img{
-    width: 900px;
-    border-radius: 40px;
+.foto-project h1 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 400;
 }
-
-.foto-project2 h1{
-    margin-left: 30px;
-    width: 800px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.foto-project3{
-    margin-top: 200px;
-    margin-left: 40px;
-    display: flex;
-}
-
-.foto-project3 img{
-    width: 900px;
-    margin-left: 30px;
-    border-radius: 40px;
-}
-
-.foto-project3 h1{
-    margin-left: 30px;
-    width: 800px;
-    text-align: center;
-    margin-top: 100px;
-}
-
 
 .bagian-contact{
     height: 1100px;
@@ -515,281 +518,7 @@ textarea {
   color: #2f2f2f;
 }
 
-/* Responsive CSS with Original Styling Preserved */
-
-/* Root Variables and Base Reset */
-* {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-}
-
-:root {
-    --warna-hitam: #0f0f0f;
-    --font-pop: "Poppins";
-    --warna-abu: rgb(20, 20, 20);
-}
-
-/* Media Queries */
-/* Mobile Phones (up to 767px) */
-@media screen and (max-width: 767px) {
-    /* Header Responsiveness */
-    header {
-        height: auto;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .logo {
-        margin-left: 10px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        margin-right: 0;
-        width: 100%;
-        display:none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    /* Home Section */
-    .bagian-home {
-        height: auto;
-        flex-direction: column;
-        padding: 100px 20px 20px;
-    }
-
-    article {
-        margin-left: 0;
-        padding-top: 50px;
-        text-align: center;
-    }
-
-    article h1 {
-        font-size: 28px;
-    }
-
-    .auto-type {
-        justify-content: center;
-    }
-
-    aside {
-        margin-top: 30px;
-        margin-left: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    aside img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .btn-home {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    /* About Section */
-    .bagian-about {
-        height: auto;
-    }
-
-    .isi-about, .nav-about {
-        margin-left: 10px;
-        padding: 20px 10px;
-    }
-
-    .button-about {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .isibtnabout {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .isibtnabout img {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .text-about, .Skill, .Achivement {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .kumpulan, .kumpulan-achive {
-        justify-content: center;
-    }
-
-    .foto-logo, .foto-achive {
-        margin: 10px;
-    }
-
-    .foto-logo img {
-        width: 100px;
-    }
-
-    /* Project Section */
-    .Project-Akhir {
-        padding: 20px 10px;
-    }
-
-    .foto-project1, .foto-project2, .foto-project3 {
-        flex-direction: column;
-        margin: 50px 0;
-        align-items: center;
-    }
-
-    .foto-project1 img, .foto-project2 img, .foto-project3 img {
-        width: 100%;
-        max-width: 350px;
-        margin-left: 0;
-    }
-
-    .foto-project1 h1, .foto-project2 h1, .foto-project3 h1 {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    /* Contact Section */
-    .bagian-contact {
-        height: auto;
-    }
-
-    .posisi {
-        margin-left: 10px;
-        padding: 20px 10px;
-    }
-
-    .container {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-
-    .left, .right {
-        width: 100%;
-        height: auto;
-    }
-
-    .right-container {
-        width: 90%;
-        padding-top: 20px;
-    }
-
-    /* Footer */
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer__nav {
-        flex-direction: column;
-    }
-
-    .footer__nav > * {
-        flex: 1 100%;
-        margin-bottom: 20px;
-    }
-
-    .nav__ul--extra {
-        column-count: 1;
-    }
-}
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1000;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Tablet Devices (768px to 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    header {
-        padding: 0 20px;
-    }
-
-    .bagian-home {
-        padding: 100px 50px;
-    }
-
-    article {
-        margin-left: 10%;
-    }
-
-    aside img {
-        width: 350px;
-        height: 350px;
-    }
-
-    .isibtnabout {
-        justify-content: center;
-    }
-
-    .text-about {
-        width: 500px;
-        margin-left: 20px;
-        font-size: 24px;
-    }
-
-    .kumpulan {
-        justify-content: center;
-    }
-
-    .Project-Akhir {
-        padding: 50px 20px;
-    }
-
-    .foto-project1, .foto-project2, .foto-project3 {
-        margin: 50px 0;
-    }
-
-    .foto-project1 img, .foto-project2 img, .foto-project3 img {
-        width: 700px;
-    }
-
-    .container {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
+/* RESPONSIVE DESIGN */
 /* Ensure images are responsive */
 img {
     max-width: 100%;
@@ -802,5 +531,856 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Large Desktop (1400px and above) */
+@media screen and (min-width: 1400px) {
+    .logo {
+        margin-left: 150px;
+    }
+    
+    nav {
+        margin-right: 300px;
+    }
+    
+    article {
+        margin-left: 25%;
+    }
+    
+    .isi-about {
+        margin-left: 15%;
+    }
+    
+    .posisi {
+        margin-left: 400px;
+    }
+    
+    /* Project Section - Large Desktop */
+    .kumpulan-project {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        max-width: 1600px;
+    }
+    
+    .foto-project {
+        padding: 45px;
+    }
+    
+    .foto-project img {
+        height: 240px;
+    }
+}
 
+/* Desktop (1200px to 1399px) */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .Project-Akhir {
+        padding: 100px 40px 80px 40px;
+    }
+    
+    .kumpulan-project {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 0 40px;
+    }
+    
+    .foto-project {
+        padding: 40px;
+    }
+    
+    .foto-project img {
+        height: 220px;
+    }
+    
+    .foto-project h1 {
+        font-size: 1.2rem;
+    }
+}
 
+/* Tablet Landscape (1024px to 1199px) */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    /* Header */
+    header {
+        padding: 0 20px;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+    
+    nav {
+        margin-right: 50px;
+    }
+    
+    nav li {
+        margin: 20px;
+    }
+
+    /* Home Section */
+    .bagian-home {
+        height: auto;
+        min-height: 700px;
+        padding: 20px;
+    }
+    
+    article {
+        margin-left: 10%;
+        padding-top: 200px;
+    }
+    
+    article h1 {
+        font-size: 35px;
+    }
+    
+    .auto-type {
+        font-size: 35px;
+    }
+    
+    aside {
+        margin-top: 120px;
+        margin-left: 100px;
+    }
+    
+    aside img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* About Section */
+    .bagian-about {
+        height: auto;
+        min-height: 800px;
+    }
+    
+    .isi-about {
+        margin-left: 5%;
+    }
+    
+    .nav-about {
+        margin-left: 50px;
+    }
+    
+    .isibtnabout img {
+        width: 300px;
+    }
+    
+    .text-about {
+        width: 400px;
+        font-size: 24px;
+    }
+    
+    .Skill {
+        width: 500px;
+    }
+
+    /* Project Section - Tablet Landscape */
+    .Project-Akhir {
+        padding: 80px 30px 60px 30px;
+    }
+    
+    .kumpulan-project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 30px;
+    }
+    
+    .foto-project {
+        padding: 35px;
+    }
+    
+    .foto-project img {
+        height: 200px;
+    }
+    
+    .foto-project h1 {
+        font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .posisi {
+        margin-left: 50px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header {
+        padding: 0 20px;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+    
+    nav {
+        margin-right: 50px;
+    }
+    
+    nav li {
+        margin: 20px;
+    }
+
+    /* Home Section */
+    .bagian-home {
+        height: auto;
+        min-height: 700px;
+        padding: 20px;
+    }
+    
+    article {
+        margin-left: 10%;
+        padding-top: 200px;
+    }
+    
+    article h1 {
+        font-size: 35px;
+    }
+    
+    .auto-type {
+        font-size: 35px;
+    }
+    
+    aside {
+        margin-top: 120px;
+        margin-left: 100px;
+    }
+    
+    aside img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* About Section */
+    .bagian-about {
+        height: auto;
+        min-height: 800px;
+    }
+    
+    .isi-about {
+        margin-left: 5%;
+    }
+    
+    .nav-about {
+        margin-left: 50px;
+    }
+    
+    .isibtnabout img {
+        width: 300px;
+    }
+    
+    .text-about {
+        width: 400px;
+        font-size: 24px;
+    }
+    
+    .Skill {
+        width: 500px;
+    }
+
+    /* Project Section - Tablet Portrait */
+    .Project-Akhir {
+        padding: 60px 25px 50px 25px;
+    }
+    
+    .judul-Project h1 {
+        font-size: 2.2rem;
+    }
+    
+    .kumpulan-project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 25px;
+    }
+    
+    .foto-project {
+        padding: 25px;
+    }
+    
+    .foto-project img {
+        height: 180px;
+    }
+    
+    .foto-project h1 {
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .posisi {
+        margin-left: 50px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+}
+
+/* Mobile Large (481px to 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* Header */
+    header {
+        height: auto;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-left: 0;
+        order: 1;
+    }
+    
+    .mobile-menu {
+        display: flex;
+        order: 2;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-right: 0;
+        display: none;
+        background-color: var(--warna-hitam);
+        padding: 20px 0;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 15px 0;
+    }
+
+    /* Home Section */
+    .bagian-home {
+        height: auto;
+        min-height: 600px;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    article {
+        margin-left: 0;
+        padding-top: 100px;
+        order: 2;
+    }
+    
+    article h1 {
+        font-size: 28px;
+    }
+    
+    .auto-type {
+        font-size: 20px;
+        justify-content: center;
+    }
+    
+    aside {
+        margin-top: 30px;
+        margin-left: 0;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    aside img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .btn-home {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* About Section */
+    .bagian-about {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .isi-about {
+        margin-left: 0;
+    }
+    
+    .nav-about {
+        margin-left: 0;
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    .button-about {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .isibtnabout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .isibtnabout img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .text-about {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px;
+    }
+    
+    .Skill {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .kumpulan {
+        justify-content: center;
+    }
+    
+    .foto-logo {
+        margin: 10px;
+    }
+    
+    .foto-logo img {
+        width: 100px;
+    }
+    
+    .kumpulan-achive {
+        justify-content: center;
+    }
+    
+    .foto-achive {
+        margin: 10px;
+    }
+    
+    .foto-achive img {
+        width: 250px;
+        height: 180px;
+    }
+
+    /* Project Section - Mobile Large */
+    .Project-Akhir {
+        padding: 50px 20px 40px 20px;
+    }
+    
+    .judul-Project h1 {
+        font-size: 2rem;
+    }
+    
+    .kumpulan-project {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .foto-project {
+        padding: 25px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .foto-project img {
+        height: 200px;
+        max-width: 280px;
+    }
+    
+    .foto-project h1 {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+
+    /* Contact Section */
+    .bagian-contact {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .posisi {
+        margin-left: 0;
+        padding-top: 50px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .left {
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .left-container {
+        margin-top: 0;
+        height: auto;
+    }
+    
+    .right {
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .right-container {
+        padding-top: 20px;
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .footer__nav {
+        flex-direction: column;
+    }
+    
+    .footer__nav > * {
+        flex: 1 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    
+    .nav__ul--extra {
+        column-count: 1;
+    }
+    
+    .legal {
+        justify-content: center;
+    }
+}
+
+/* Mobile Small (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Header */
+    header {
+        height: auto;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-left: 0;
+        order: 1;
+    }
+    
+    .mobile-menu {
+        display: flex;
+        order: 2;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-right: 0;
+        display: none;
+        background-color: var(--warna-hitam);
+        padding: 20px 0;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 15px 0;
+    }
+
+    /* Home Section */
+    .bagian-home {
+        height: auto;
+        min-height: 600px;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    article {
+        margin-left: 0;
+        padding-top: 100px;
+        order: 2;
+    }
+    
+    article h1 {
+        font-size: 24px;
+    }
+    
+    .auto-type {
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    aside {
+        margin-top: 190px;
+        margin-left: 0;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    aside img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .btn-home {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* About Section */
+    .bagian-about {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .isi-about {
+        margin-left: 0;
+    }
+    
+    .nav-about {
+        margin-left: 0;
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    .button-about {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .isibtnabout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .isibtnabout img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .text-about {
+        width: 100%;
+        margin-left: 0;
+        font-size: 16px;
+    }
+    
+    .Skill {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .kumpulan {
+        justify-content: center;
+    }
+    
+    .foto-logo {
+        margin: 10px;
+    }
+    
+    .foto-logo img {
+        width: 80px;
+    }
+    
+    .kumpulan-achive {
+        justify-content: center;
+    }
+    
+    .foto-achive {
+        margin: 10px;
+    }
+    
+    .foto-achive img {
+        width: 200px;
+        height: 150px;
+    }
+
+    /* Project Section - Mobile Small */
+    .Project-Akhir {
+        padding: 40px 15px 30px 15px;
+    }
+    
+    .judul-Project h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .kumpulan-project {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .foto-project {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .foto-project img {
+        height: 160px;
+        max-width: 250px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .foto-project h1 {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0;
+    }
+
+    /* Contact Section */
+    .bagian-contact {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .posisi {
+        margin-left: 0;
+        padding-top: 50px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .left {
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .left-container {
+        margin-top: 0;
+        height: auto;
+    }
+    
+    .right {
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .right-container {
+        padding-top: 20px;
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .footer__nav {
+        flex-direction: column;
+    }
+    
+    .footer__nav > * {
+        flex: 1 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    
+    .nav__ul--extra {
+        column-count: 1;
+    }
+    
+    .legal {
+        justify-content: center;
+    }
+}
+
+/* Extra Small Mobile (up to 480px) */
+@media screen and (max-width: 480px) {
+    article h1 {
+        font-size: 24px;
+    }
+    
+    .auto-type {
+        font-size: 16px;
+    }
+
+    aside {
+        margin-top:190px;
+    }
+    
+    aside img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .text-about {
+        font-size: 16px;
+    }
+    
+    .foto-logo img {
+        width: 80px;
+    }
+    
+    .foto-achive img {
+        width: 200px;
+        height: 150px;
+    }
+    
+    .foto-project1 img, .foto-project2 img, .foto-project3 img {
+        max-width: 250px;
+    }
+    
+    .foto-project1 h1, .foto-project2 h1, .foto-project3 h1 {
+        font-size: 14px;
+    }
+}
+
+/* Large Desktop (above 1400px) */
+@media screen and (min-width: 1400px) {
+    .logo {
+        margin-left: 150px;
+    }
+    
+    nav {
+        margin-right: 300px;
+    }
+    
+    article {
+        margin-left: 25%;
+    }
+    
+    .isi-about {
+        margin-left: 15%;
+    }
+    
+    .posisi {
+        margin-left: 400px;
+    }
+}

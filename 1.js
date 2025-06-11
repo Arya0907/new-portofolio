@@ -85,3 +85,25 @@ function show3() {
         document.getElementById('SkillBos')
         .style.display = "none";
 }
+
+
+const container = document.getElementById("projectContainer");
+
+// Simulasi data baru
+let projectCounter = 4;
+function loadMoreProjects() {
+    for (let i = 0; i < 3; i++) {
+        const div = document.createElement("div");
+        div.className = "foto-project";
+        div.textContent = "Project " + projectCounter++;
+        container.appendChild(div);
+    }
+}
+
+container.addEventListener("scroll", () => {
+    const nearEnd = container.scrollWidth - container.scrollLeft - container.clientWidth < 100;
+
+    if (nearEnd) {
+        loadMoreProjects();
+    }
+});
